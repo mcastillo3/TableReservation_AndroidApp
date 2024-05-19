@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Reserver</string>
+    <string name="WhereToSit">Where do you want to sit?</string>
+    <string name="waiterimage">waiterImage</string>
+    <string name="number_of_seats">How many seats are you requesting?</string>
+    <string name="submit">Submit</string>
+</resources>
