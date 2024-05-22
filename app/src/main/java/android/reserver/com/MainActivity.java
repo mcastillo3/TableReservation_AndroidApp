@@ -1,13 +1,21 @@
 package android.reserver.com;
 
+import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
+import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
@@ -15,6 +23,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+/*
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -67,4 +76,57 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+}*/
+
+public class MainActivity extends AppCompatActivity {
+
+    private final String NUMBER_OF_SEATS = "numberOfSeats";
+    private int mNumberOfSeats;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        if (savedInstanceState != null) {
+            mNumberOfSeats = savedInstanceState.getInt(NUMBER_OF_SEATS);
+            Log.d("CREATION", "number of seats saved");
+        }
+    }
+
+    public void submitButton(View view) {
+        EditText et=(EditText)findViewById(R.id.editText);
+        int numGuests = Integer.parseInt(et.getText().toString());
+        try {
+            Toast toast;
+
+            if(numGuests>6) {
+                toast=Toast.makeText(this,R.string.lessThanSix ,Toast.LENGTH_LONG);
+            }
+            else {
+                if(numGuests>0) {
+                    mNumberOfSeats = numGuests;
+                    /*toast=Toast.makeText(this,"thank you for the reservation", Toast.LENGTH_LONG);*/
+                    toast=Toast.makeText(this, R.string.thank, Toast.LENGTH_LONG);
+                    onSubmitClick(view);
+                }
+                else  toast=Toast.makeText(this,R.string.greaterThanZero, Toast.LENGTH_LONG);
+            }
+            toast.show();
+        }
+        catch (Exception e){
+            e.printStackTrace();  }
+    }
+
+    public void onSubmitClick(View view) {
+        Intent intent = new Intent(this, floorPlan.class);
+        intent.putExtra(floorPlan.EXTRA_SEATS, mNumberOfSeats);
+        startActivity(intent);
+    }
+
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putInt(NUMBER_OF_SEATS, mNumberOfSeats);
+    }
+
 }

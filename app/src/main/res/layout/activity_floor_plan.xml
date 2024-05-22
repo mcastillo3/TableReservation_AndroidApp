@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".floorPlan">
+
+    <ImageView
+        android:id="@+id/overview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:paddingTop="100dp"
+        android:rotation="-90"
+        android:rotationY="0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/overhead" />
+
+    <ImageView
+        android:id="@+id/booth1"
+        android:layout_width="50dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="8dp"
+        android:rotation="-90"
+        app:layout_constraintStart_toStartOf="@+id/overview"
+        app:layout_constraintTop_toBottomOf="@+id/booth6"
+        app:srcCompat="@drawable/rectanglesolid" />
+
+    <ImageView
+        android:id="@+id/booth2"
+        android:layout_width="50dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="12dp"
+        android:rotation="-90"
+        app:layout_constraintStart_toStartOf="@+id/overview"
+        app:layout_constraintTop_toBottomOf="@+id/booth1"
+        app:srcCompat="@drawable/rectanglesolid" />
+
+    <ImageView
+        android:id="@+id/booth3"
+        android:layout_width="50dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="8dp"
+        android:rotation="-90"
+        app:layout_constraintStart_toStartOf="@+id/overview"
+        app:layout_constraintTop_toBottomOf="@+id/booth2"
+        app:srcCompat="@drawable/rectanglesolid" />
+
+    <ImageView
+        android:id="@+id/booth4"
+        android:layout_width="50dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="36dp"
+        app:layout_constraintEnd_toEndOf="@+id/overview"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/rectanglesolid" />
+
+    <ImageView
+        android:id="@+id/booth5"
+        android:layout_width="50dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/booth4"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/rectanglesolid" />
+
+    <ImageView
+        android:id="@+id/booth6"
+        android:layout_width="50dp"
+        android:layout_height="47dp"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/table1"
+        app:layout_constraintEnd_toStartOf="@+id/booth5"
+        app:layout_constraintHorizontal_bias="0.927"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/rectanglesolid" />
+
+    <ImageView
+        android:id="@+id/table2"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="64dp"
+        app:layout_constraintEnd_toEndOf="@+id/overview"
+        app:layout_constraintTop_toBottomOf="@+id/booth5"
+        app:srcCompat="@drawable/roundsolid" />
+
+    <ImageView
+        android:id="@+id/table1"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="12dp"
+        app:layout_constraintEnd_toStartOf="@+id/table2"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/booth1"
+        app:layout_constraintTop_toBottomOf="@+id/booth5"
+        app:srcCompat="@drawable/roundsolid" />
+
+    <ImageView
+        android:id="@+id/table3"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="12dp"
+        app:layout_constraintEnd_toStartOf="@+id/table4"
+        app:layout_constraintTop_toBottomOf="@+id/table1"
+        app:srcCompat="@drawable/roundsolid" />
+
+    <ImageView
+        android:id="@+id/table4"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="64dp"
+        app:layout_constraintEnd_toEndOf="@+id/overview"
+        app:layout_constraintTop_toBottomOf="@+id/table2"
+        app:srcCompat="@drawable/roundsolid" />
+
+    <ImageView
+        android:id="@+id/table5"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="@+id/overview"
+        app:layout_constraintTop_toBottomOf="@+id/booth3"
+        app:srcCompat="@drawable/roundsolid" />
+
+    <ImageView
+        android:id="@+id/table6"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toEndOf="@+id/table5"
+        app:layout_constraintTop_toBottomOf="@+id/table3"
+        app:srcCompat="@drawable/roundsolid" />
+
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="55dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="52dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.926"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/overview"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="?attr/homeAsUpIndicator" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

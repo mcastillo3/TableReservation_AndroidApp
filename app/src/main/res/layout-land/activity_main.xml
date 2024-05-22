@@ -77,10 +77,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="20dp">
+        android:padding="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="-42dp">
 
         <TextView
             android:id="@+id/textView"
@@ -103,7 +106,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/editText"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="39dp"
+            android:layout_marginTop="38dp"
             android:onClick="submitButton"
             android:text="@string/submit" />
 
@@ -111,19 +114,22 @@
             android:id="@+id/imageView"
             android:layout_width="200dp"
             android:layout_height="200dp"
-            android:layout_below="@+id/textView"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="115dp"
+            android:layout_marginTop="20dp"
+            android:layout_toEndOf="@+id/textView2"
             android:contentDescription="@string/waiterImage"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="28dp"
             app:srcCompat="@drawable/waiter" />
 
         <TextView
             android:id="@+id/textView2"
+            style="@style/WaiterText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/howManySeats"
-            android:layout_below="@id/imageView"
-            style="@style/WaiterText" />
+            android:layout_below="@+id/textView"
+            android:layout_marginTop="34dp"
+            android:text="@string/howManySeats" />
 
         <EditText
             android:id="@+id/editText"

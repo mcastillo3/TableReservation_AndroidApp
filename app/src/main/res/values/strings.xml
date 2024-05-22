@@ -1,7 +1,11 @@
 <resources>
     <string name="app_name">Reserver</string>
     <string name="WhereToSit">Where do you want to sit?</string>
-    <string name="waiterimage">waiterImage</string>
-    <string name="number_of_seats">How many seats are you requesting?</string>
+    <string name="waiterImage">Waiter image</string>
     <string name="submit">Submit</string>
+    <string name="where_do_you_want_to_eat">Reservation App</string>
+    <string name="howManySeats">How many seats are you requesting?</string>
+    <string name="thank">Thank you for the reservation!</string>
+    <string name="greaterThanZero">the number of guests must be greater than 0</string>
+    <string name="lessThanSix">please call 123-456-7890 to make a reservation for parties larger than 6</string>
 </resources>
