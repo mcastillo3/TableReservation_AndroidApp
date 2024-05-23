@@ -15,7 +15,7 @@ import androidx.core.view.WindowInsetsCompat;
 public class floorPlan extends AppCompatActivity {
 
     public static final String EXTRA_SEATS = "android.reserver.com.floor_plan";
-    ImageButton backBtn;
+    /*ImageButton backBtn;*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,12 +31,12 @@ public class floorPlan extends AppCompatActivity {
             setContentView(R.layout.activity_floor_plan);
         }
 
-        backBtn = findViewById(R.id.backButton);
+/*        backBtn = findViewById(R.id.backButton);
         backBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 finish();
             }
-        });
+        });*/
     }
 }

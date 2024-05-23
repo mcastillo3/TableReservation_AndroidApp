@@ -147,7 +147,7 @@
         app:layout_constraintTop_toBottomOf="@+id/table3"
         app:srcCompat="@drawable/roundsolid" />
 
-    <ImageButton
+<!--    <ImageButton
         android:id="@+id/backButton"
         android:layout_width="55dp"
         android:layout_height="49dp"
@@ -158,6 +158,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/overview"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="?attr/homeAsUpIndicator" />
+        app:srcCompat="?attr/homeAsUpIndicator" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -151,7 +151,8 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
             return true;
         } else if (item.getItemId() == R.id.about) {
-            // go to about activity
+            Intent intent = new Intent(this, About.class);
+            startActivity(intent);
             return true;
         }
         return super.onOptionsItemSelected(item);
