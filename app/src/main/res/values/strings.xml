@@ -7,5 +7,13 @@
     <string name="howManySeats">How many seats are you requesting?</string>
     <string name="thank">Thank you for the reservation!</string>
     <string name="greaterThanZero">the number of guests must be greater than 0</string>
-    <string name="lessThanSix">please call 123-456-7890 to make a reservation for parties larger than 6</string>
+    <string name="lessThanSix">please call 123–456–7890 to make a reservation for parties larger than 6</string>
+    <string name="helpSteps">Enter a number of guests between 1 and 6. \n
+        Click the SUBMIT button. \n
+        Choose your booth (or table if less than 5 guests).
+    </string>
+    <string name="info">This app is used to reserve a table</string>
+    <string name="help">Help</string>
+    <string name="about">About</string>
+
 </resources>

@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -80,6 +82,7 @@ public class MainActivity extends AppCompatActivity {
 
 public class MainActivity extends AppCompatActivity {
 
+    private Menu mMenu;
     private final String NUMBER_OF_SEATS = "numberOfSeats";
     private int mNumberOfSeats;
 
@@ -129,4 +132,28 @@ public class MainActivity extends AppCompatActivity {
         outState.putInt(NUMBER_OF_SEATS, mNumberOfSeats);
     }
 
+    public void onHelpClick(View view) {
+        Intent intent = new Intent(this, Help.class);
+        startActivity(intent);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu (Menu menu) {
+        getMenuInflater().inflate(R.menu.appbar_menu, menu);
+        mMenu = menu;
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected (MenuItem item) {
+        if (item.getItemId() == R.id.help) {
+            Intent intent = new Intent(this, Help.class);
+            startActivity(intent);
+            return true;
+        } else if (item.getItemId() == R.id.about) {
+            // go to about activity
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
 }
