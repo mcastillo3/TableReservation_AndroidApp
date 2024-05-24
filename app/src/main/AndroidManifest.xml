@@ -21,7 +21,11 @@
             android:exported="false"
             android:parentActivityName=".MainActivity" />
         <activity
-            android:name=".floorPlan"
+            android:name=".Floor_plan"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Floor_plan_six"
             android:exported="false"
             android:parentActivityName=".MainActivity" />
         <activity

@@ -15,5 +15,23 @@
     <string name="info">This app is used to reserve a table</string>
     <string name="help">Help</string>
     <string name="about">About</string>
+    <string name="floor_plan_of_restaurant">floor plan of restaurant</string>
+
+    <string-array name="dates">
+        <item>FRI</item>
+        <item>SAT</item>
+        <item>SUN</item>
+    </string-array>
+
+    <string-array name="times">
+        <item>4:00 PM</item>
+        <item>4:30 PM</item>
+        <item>5:00 PM</item>
+        <item>5:30 PM</item>
+        <item>6:00 PM</item>
+        <item>6:30 PM</item>
+        <item>7:00 PM</item>
+        <item>7:30 PM</item>
+    </string-array>
 
 </resources>
